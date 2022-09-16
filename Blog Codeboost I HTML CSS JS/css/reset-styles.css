@@ -1,0 +1,61 @@
+/* Reset by reinaldorm_ */
+
+/* First, removing some default spaces */
+
+body,
+header,
+nav,
+main,
+section,
+footer,
+div,
+article,
+blockquote,
+input,
+ul,
+li,
+q,
+h1,
+h2,
+img,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+button {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Getting rid of some styles */
+
+button,
+form,
+input,
+ul,
+li,
+a {
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Re-defaulting things */
+
+*:not(strong, b, del, ins, s, sub, sup) {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+html {
+  line-height: 1;
+}
+
+/* End for now, thanks! */

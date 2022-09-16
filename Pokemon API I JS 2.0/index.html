@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/favicon/pokemon-icon-file-4.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./main.js"></script>
+  <title>Pokemon API I JS</title>
+</head>
+
+<body>
+
+  <section id="s-hero">
+    <header id="s-hero-header">
+      <div id="s-hero-header-logo"><img src="./img/svg/logo-pokemon.svg" alt="logo-pokemon"></div>
+      <nav id="s-hero-header-nav">
+        <a data-pokedex="pokedex" href="#" class="s-hero-header-nav-link">Pokedex</a>
+        <a href="#" class="s-hero-header-nav-link"><img src="./img/icon/Social/icon-github.svg" alt="github"></a>
+        <a href="#" class="s-hero-header-nav-link"><img src="./img/icon/Social/icon-reddit.svg" alt="reddit"></a>
+      </nav>
+    </header>
+    <section id="s-hero-main">
+      <h1 class="s-hero-main-h1">Quem é esse Pokemon?</h1>
+      <h2 class="s-hero-main-h2">
+        O lugar perfeito para encontrar e pesquisar sobre seu Pokemon favorito!
+      </h2>
+      <img src="./img/png/pokeball.png" alt="pokeball" class="s-hero-main-pokeball">
+    </section>
+  </section>
+
+  <section id="s-search">
+    <div id="s-search-content">
+      <h1 class="s-search-h1">Pesquise seu </br> Pokemon <img src="./img/icon/icon-arrow.svg"></h1>
+      <form id="s-search-form">
+        <input data-search="input" type="text" name="s-search-form-input" placeholder="Pesquise por nome ou ID" id="s-search-form-input">
+        <button data-search="button" class="s-search-form-icon"><img src="./img/icon/icon-search.svg"></button>
+      </form>
+    </div>
+  </section>
+
+  <section id="s-pokemon">
+    <ul id="s-pokemon-types">
+      <li class="s-pokemon-types-item on" data-type="all"><a href="#"> <img src="./img/icon/Types/icon-all.svg">All</a></li>
+      <li class="s-pokemon-types-item" data-type="1"><a href="#"> <img src="./img/icon/Types/icon-normal.svg">Normal</a></li>
+      <li class="s-pokemon-types-item" data-type="2"><a href="#"> <img src="./img/icon/Types/icon-fighting.svg">Fighting</a></li>
+      <li class="s-pokemon-types-item" data-type="3"><a href="#"> <img src="./img/icon/Types/icon-flying.svg">Flying</a></li>
+      <li class="s-pokemon-types-item" data-type="4"><a href="#"> <img src="./img/icon/Types/icon-poison.svg">Poison</a></li>
+      <li class="s-pokemon-types-item" data-type="5"><a href="#"> <img src="./img/icon/Types/icon-ground.svg">Ground</a></li>
+      <li class="s-pokemon-types-item" data-type="6"><a href="#"> <img src="./img/icon/Types/icon-rock.svg">Rock</a></li>
+      <li class="s-pokemon-types-item" data-type="7"><a href="#"> <img src="./img/icon/Types/icon-bug.svg">Bug</a></li>
+      <li class="s-pokemon-types-item" data-type="8"><a href="#"> <img src="./img/icon/Types/icon-ghost.svg">Ghost</a></li>
+      <li class="s-pokemon-types-item" data-type="9"><a href="#"> <img src="./img/icon/Types/icon-steel.svg">Steel</a></li>
+      <li class="s-pokemon-types-item" data-type="10"><a href="#"> <img src="./img/icon/Types/icon-fire.svg">Fire</a></li>
+      <li class="s-pokemon-types-item" data-type="11"><a href="#"> <img src="./img/icon/Types/icon-water.svg">Water</a></li>
+      <li class="s-pokemon-types-item" data-type="12"><a href="#"> <img src="./img/icon/Types/icon-grass.svg">Grass</a></li>
+      <li class="s-pokemon-types-item" data-type="13"><a href="#"> <img src="./img/icon/Types/icon-electric.svg">Electric</a></li>
+      <li class="s-pokemon-types-item" data-type="14"><a href="#"> <img src="./img/icon/Types/icon-psychic.svg">Psychic</a></li>
+      <li class="s-pokemon-types-item" data-type="15"><a href="#"> <img src="./img/icon/Types/icon-ice.svg">Ice</a></li>
+      <li class="s-pokemon-types-item" data-type="16"><a href="#"> <img src="./img/icon/Types/icon-dragon.svg">Dragon</a></li>
+      <li class="s-pokemon-types-item" data-type="17"><a href="#"> <img src="./img/icon/Types/icon-dark.svg">Dark</a></li>
+      <li class="s-pokemon-types-item" data-type="18"><a href="#"> <img src="./img/icon/Types/icon-fairy.svg">Fairy</a></li>
+    </ul>
+    <div id="s-pokemon-content">
+      <span class="s-pokemon-content-span"><img src="./img/icon/icon-pokeball.svg"><span data-count="">0</span> Pokemons</span>
+      <ul data-pokemon="pokemon" id="s-pokemon-content-list"></ul>
+      <button id="s-pokemon-show" data-show="show">Mostrar Mais</button>
+    </div>
+  </section>
+
+  <section data-modal="modal" id="s-modal">
+    <div class="s-modal-img"><img data-modal="img" src="./img/wartortle.png"></div>
+    <div id="s-modal-info">
+      <div id="s-modal-heading">
+        <span data-modal="name" class="s-modal-name"></span>
+        <span data-modal="id" class="s-modal-id"></span>
+      </div>
+      <ul id="s-modal-statistics">
+        <li class="s-modal-statistics-item">
+          <span data-modal="weight" class="s-modal-statistics-value">22.5kg</span>
+          <span class="s-modal-statistics-name">Weight</span>
+        </li>
+        <li class="s-modal-statistics-item">
+          <span data-modal="height" class="s-modal-statistics-value">1.0M</span>
+          <span class="s-modal-statistics-name">Height</span>
+        </li>
+        <li class="s-modal-statistics-item">
+          <div class="s-modal-statistics-item-types">
+            <span data-modal="type" data-value="" class="s-modal-statistics-value">Water</span>
+            <button data-modal="plusType" class="s-modal-statistics-plus"><img src="./img/icon/icon-plus.svg"></button>
+            <ul class="s-modal-statistics-plus-types" data-modal="plusTypes">
+
+            </ul>
+          </div>
+          <span class="s-modal-statistics-name">Type</span>
+        </li>
+      </ul>
+      <div id="s-modal-weaknesses">
+        <ul data-modal="weaknesses" id="s-modal-weaknesses-list">
+
+        </ul>
+        <span class="s-modal-weaknesses-span">Weaknesses</span>
+      </div>
+      <ul id="s-modal-stats">
+        <li data-stats="hp" class="s-modal-stats-item">
+          <span class="s-modal-stats-name">HP</span>
+          <div class="s-modal-stats-meter-cont">
+            <div data-modal="stats" class="s-modal-stats-meter"></div>
+          </div>
+        </li>
+        <li data-stats="attack" class="s-modal-stats-item">
+          <span class="s-modal-stats-name">Attack</span>
+          <div class="s-modal-stats-meter-cont">
+            <div data-modal="stats" class="s-modal-stats-meter"></div>
+          </div>
+        </li>
+        <li data-stats="defense" class="s-modal-stats-item">
+          <span class="s-modal-stats-name">Defense</span>
+          <div class="s-modal-stats-meter-cont">
+            <div data-modal="stats" class="s-modal-stats-meter"></div>
+          </div>
+        </li>
+        <li data-stats="spAttack" class="s-modal-stats-item">
+          <span class="s-modal-stats-name">Sp. Attack</span>
+          <div class="s-modal-stats-meter-cont">
+            <div data-modal="stats" class="s-modal-stats-meter"></div>
+          </div>
+        </li>
+        <li data-stats="spDefense" class="s-modal-stats-item">
+          <span class="s-modal-stats-name">Sp. Defense</span>
+          <div class="s-modal-stats-meter-cont">
+            <div data-modal="stats" class="s-modal-stats-meter"></div>
+          </div>
+        </li>
+        <li data-stats="speed" class="s-modal-stats-item">
+          <span class="s-modal-stats-name">Speed</span>
+          <div class="s-modal-stats-meter-cont">
+            <div data-modal="stats" class="s-modal-stats-meter"></div>
+          </div>
+        </li>
+        <ul id="s-modal-stats-sep">
+          <li class="s-modal-stats-sep-bar"></li>
+          <li class="s-modal-stats-sep-bar"></li>
+          <li class="s-modal-stats-sep-bar"></li>
+          <li class="s-modal-stats-sep-bar"></li>
+          <li class="s-modal-stats-sep-bar"></li>
+          <li class="s-modal-stats-sep-bar"></li>
+        </ul>
+
+      </ul>
+    </div>
+    <div class="s-modal-exit" data-exit="exit"><img src="./img/icon/icon-cross.svg" alt="close-modal"></div>
+  </section>
+
+</body>
+
+</html>

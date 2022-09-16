@@ -1,0 +1,457 @@
+@import url(./reset-styles.css);
+@import url(./responsivo-check.css);
+
+:root {
+  --soraFont: "Sora";
+  --interFont: "Inter";
+  --montserratFont: "Montserrat";
+  --space: "Space Grotesk";
+}
+
+/* Header */
+
+#header {
+  max-width: 1220px;
+  padding: 1.25rem 0px;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  gap: 46px;
+}
+
+.nav-item {
+  font: 500 1rem var(--interFont);
+  color: #616161;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-item::after {
+  content: url(../img/icon/dropdown-icon.svg);
+  display: block;
+}
+
+.header-sign {
+  padding: 11px 50px;
+  background: #ffce2e;
+  border-radius: 100px;
+  font: 500 1rem var(--montserratFont);
+  color: #242424;
+  text-transform: uppercase;
+}
+
+/* Main */
+
+#main {
+  background: url(../img/png/woman-bg.png) no-repeat center -65px;
+  padding: 1.5rem 0px;
+}
+
+#nav {
+  max-width: 1220px;
+  padding: 1.25rem 0px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav .header-nav .nav-item {
+  color: #fff;
+}
+
+#sect-main {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+#main-top {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 100px;
+}
+
+.mainTop-spn {
+  font: 500 0.8125rem var(--interFont);
+  color: #fff;
+  padding: 5px 0.625rem;
+  border-radius: 7.5rem;
+  background: #006d8f;
+}
+
+.mainTop-p {
+  font: 500 15px var(--interFont);
+  color: #fff;
+  opacity: 0.7;
+}
+
+.main-h1 {
+  font: 700 3rem var(--montserratFont);
+  color: #fff;
+  max-width: 740px;
+  margin-bottom: 1.5rem;
+}
+
+.main-h3 {
+  font: 400 1.125rem var(--interFont);
+  color: #fff;
+  opacity: 0.7;
+  max-width: 365px;
+  margin-bottom: 2.5rem;
+}
+
+.main-a {
+  font: 500 15px var(--montserratFont);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px 2.5rem;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin-bottom: 150px;
+}
+
+/* Section Tarifas */
+
+#sect-tarifas {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 75px 0px 0px 0px;
+  display: grid;
+  grid: 1fr / 1.25fr 1fr;
+  gap: 7.5rem;
+}
+
+#tarifas-info {
+  flex: 1;
+}
+
+.tarifas-h1 {
+  font: 700 2.5rem var(--montserratFont);
+  color: #242424;
+  margin-bottom: 0.5rem;
+}
+
+.tarifas-h2 {
+  font: 500 1.75rem var(--montserratFont);
+  color: #242424;
+  opacity: 0.7;
+  margin-bottom: 100px;
+}
+
+#tarifas-list {
+  display: grid;
+  grid: 1fr 1fr / 1fr 1fr;
+  gap: 70px 110px;
+}
+
+.tarifas-icon {
+  margin-bottom: 10px;
+}
+
+.yellow-line {
+  width: 1rem;
+  height: 2px;
+  background: #ffce2e;
+  margin-bottom: 6px;
+}
+
+.tarifas-h3 {
+  font: 500 1.125rem var(--montserratFont);
+  color: #242424;
+  margin-bottom: 0.5rem;
+}
+
+.tarifas-p {
+  font: 400 1rem var(--interFont);
+  color: #616161;
+}
+
+.tarifas-img {
+  max-width: 100%;
+  justify-self: flex-end;
+  position: relative;
+  top: -150px;
+}
+
+/* Section Banco */
+
+#sect-banco-wrapper {
+  padding: 75px 0px 75px 0px;
+  background: #fafafa;
+}
+
+#sect-banco {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+#banco-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.banco-h1 {
+  font: 700 2.5rem var(--montserratFont);
+  color: #242424;
+  margin-bottom: 0.5rem;
+}
+
+.banco-h2 {
+  font: 500 1.75rem var(--montserratFont);
+  color: #616161;
+}
+
+.banco-switch {
+  border: 1px solid #c4c4c4;
+  padding: 0.5rem 0.75rem;
+  border-radius: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banco-a {
+  font: 600 1rem var(--montserratFont);
+  text-transform: uppercase;
+  color: #616161;
+  border-radius: 120px;
+  padding: 1.125rem 5rem;
+  transition: 0.3s;
+}
+
+.banco-a.active {
+  background: #242424;
+  color: #fff;
+}
+
+#banco-bottom {
+  background: linear-gradient(98.6deg, #020302 7.61%, #242424 96.26%);
+  border-radius: 12px;
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  align-items: center;
+  position: relative;
+}
+
+#banco-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 70%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255, 0, 76, 0) 79%, rgba(8, 9, 8, 0.5) 100%);
+  z-index: 400;
+}
+
+.banco-bottomLeft {
+  padding: 0px 8rem;
+}
+
+.banco-h3 {
+  font: 600 1.5rem var(--montserratFont);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.banco-p {
+  font: 400 1rem var(--interFont);
+  color: #fff;
+  opacity: 0.7;
+  margin-bottom: 3.125rem;
+}
+
+.banco-spn {
+  font: 500 0.875rem var(--interFont);
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banco-bottomRight {
+  position: relative;
+  background: url(../img/png/phone-png.png) no-repeat left 60px;
+  background-size: 500px;
+}
+
+.banco-card {
+  z-index: 300;
+  position: relative;
+  top: -80px;
+  left: -60px;
+}
+
+.banco-logo {
+  position: absolute;
+  right: 60px;
+  bottom: 50px;
+  z-index: 500;
+}
+
+/* Media Queries */
+
+@media (max-width: 1050px) {
+  #header {
+    display: none;
+  }
+  #main {
+    padding: 1rem 1.5rem;
+  }
+  #sect-tarifas {
+    padding: 75px 1.5rem 0px 1.5rem;
+  }
+  .tarifas-img {
+    max-width: 100%;
+    justify-self: flex-end;
+    position: static;
+  }
+  #sect-banco-wrapper {
+    padding: 75px 1rem;
+  }
+  .banco-bottomLeft {
+    padding: 0px 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-nav {
+    display: none;
+  }
+  .header-sign {
+    padding: 11px 25px;
+    background: #ffce2e;
+    border-radius: 100px;
+    font: 500 1rem var(--montserratFont);
+    color: #242424;
+    text-transform: uppercase;
+  }
+  #main {
+    background: url(../img/png/woman-bg.png) no-repeat left -65px;
+  }
+  #sect-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .mainTop-spn {
+    display: none;
+  }
+  .main-h1 {
+    font: 700 2.5rem var(--montserratFont);
+  }
+  #sect-tarifas {
+    grid: 1fr / 1fr;
+  }
+  .tarifas-img {
+    display: none;
+  }
+  #banco-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .banco-info {
+    margin-bottom: 2.5rem;
+  }
+  #banco-bottom {
+    grid: 1fr / 1fr;
+    gap: 30px;
+  }
+  #banco-bottom::before {
+    left: 0;
+    width: 100%;
+  }
+  .banco-bottomLeft {
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .banco-card {
+    top: -85px;
+    left: 20%;
+    max-width: 310px;
+  }
+  .banco-bottomRight {
+    background: url(../img/png/phone-png.png) no-repeat center 0px;
+    background-size: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  #sect-tarifas {
+    padding: 75px 0px;
+  }
+  #tarifas-info {
+    text-align: center;
+  }
+  #tarifas-list {
+    display: grid;
+    grid: 1fr / 1fr;
+    gap: 70px;
+  }
+  .tarifas-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px 100px;
+  }
+  .banco-h1 {
+    font: 700 2rem var(--montserratFont);
+  }
+  .banco-h2 {
+    font: 500 1.5rem var(--montserratFont);
+  }
+  .banco-switch {
+    padding: 2px 0.7rem;
+  }
+  .banco-a {
+    font: 600 0.875rem var(--montserratFont);
+    padding: 1rem 41px;
+    flex: 1;
+  }
+  .banco-bottomLeft {
+    padding: 4rem 0.5rem;
+  }
+  .banco-h3 {
+    font: 600 1.5rem var(--montserratFont);
+    margin-bottom: 1rem;
+    max-width: 250px;
+  }
+  .banco-p {
+    font: 300 1rem var(--interFont);
+    margin-bottom: 3.125rem;
+    max-width: 300px;
+  }
+  .banco-bottomRight {
+    background: url(../img/png/phone-png.png) no-repeat center -5px;
+    background-size: 400px;
+  }
+  .banco-card {
+    top: -85px;
+    left: 10px;
+    max-width: 310px;
+  }
+  .banco-logo {
+    display: none;
+  }
+}

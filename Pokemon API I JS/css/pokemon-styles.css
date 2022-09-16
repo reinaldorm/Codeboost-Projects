@@ -1,0 +1,254 @@
+:root {
+  --altFont: "Space Grotesk";
+}
+
+#s-pokemon-list {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.pokemon {
+  flex: 0 1 calc(33% - 1rem);
+  padding: 25px 50px;
+  gap: 50px;
+  background: #ffffff;
+  box-shadow: 0px 2px 1rem -0.5rem rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+  animation: showUp 0.6s ease 0s 1 normal both;
+}
+
+.pokemon:hover {
+  box-shadow: 0px 6px 1rem -0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pokemon-img img {
+  z-index: 1;
+  position: absolute;
+  max-height: 120px;
+}
+
+.pokemon-img::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  padding: 100%;
+  padding: 1.5rem;
+  background: #dbd5b2ad;
+  border-radius: 100vmax;
+}
+
+.pokemon-info {
+  width: 100%;
+}
+
+.pokemon-id {
+  font: 500 0.75rem var(--defFont);
+  color: #939393;
+  margin-bottom: 0.625rem;
+}
+
+.pokemon-name {
+  font: 700 1.125rem var(--defFont);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.s-pokemon-show {
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: #3f5db3;
+  align-self: center;
+  background: rgba(63, 93, 179, 0.1);
+  font: 600 0.875rem "Montserrat";
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.s-pokemon-show:hover {
+  background: #3f5db3;
+  color: #fff;
+}
+
+/* Pokemons Background Colors */
+
+.pokemon.fighting .pokemon-img::before {
+  background: #e0a3a3ad;
+}
+
+.pokemon.flying .pokemon-img::before {
+  background: #aad4d2ad;
+}
+
+.pokemon.poison .pokemon-img::before {
+  background: #ccaad4ad;
+}
+
+.pokemon.ground .pokemon-img::before {
+  background: #ca8f6dad;
+}
+
+.pokemon.rock .pokemon-img::before {
+  background: #636675ad;
+}
+
+.pokemon.bug .pokemon-img::before {
+  background: #abc079ad;
+}
+
+.pokemon.ghost .pokemon-img::before {
+  background: #848ee4ad;
+}
+
+.pokemon.steel .pokemon-img::before {
+  background: #8498a5ad;
+}
+
+.pokemon.fire .pokemon-img::before {
+  background: #f79567ad;
+}
+
+.pokemon.water .pokemon-img::before {
+  background: #a3bbe0ad;
+}
+
+.pokemon.grass .pokemon-img::before {
+  background: #76cc76ad;
+}
+
+.pokemon.electric .pokemon-img::before {
+  background: #e0d56bad;
+}
+
+.pokemon.psychic .pokemon-img::before {
+  background: #fdb3f3ad;
+}
+
+.pokemon.ice .pokemon-img::before {
+  background: #b3eefdad;
+}
+
+.pokemon.dragon .pokemon-img::before {
+  background: #94b1ffad;
+}
+
+.pokemon.dark .pokemon-img::before {
+  background: #c9b3fdad;
+}
+
+.pokemon.fairy .pokemon-img::before {
+  background: #fdb3f9ad;
+}
+
+[data-type="normal"] {
+  color: #8a8a8a;
+  background: #c0c0c036;
+}
+
+[data-type="fighting"] {
+  color: #dd7878ad;
+  background: #e0a3a336;
+}
+
+[data-type="flying"] {
+  color: #3c72a5;
+  background: #d9faff;
+}
+
+[data-type="poison"] {
+  color: #a53c9a;
+  background: #fed9ff;
+}
+
+[data-type="ground"] {
+  color: #ca8f6d;
+  background: #d6a0814f;
+}
+
+[data-type="rock"] {
+  color: #636675;
+  background: #a7abbdad;
+}
+
+[data-type="bug"] {
+  color: #abc079;
+  background: #abc07936;
+}
+
+[data-type="ghost"] {
+  color: #848ee4;
+  background: #848ee436;
+}
+
+[data-type="steel"] {
+  color: #8498a5;
+  background: #8498a536;
+}
+
+[data-type="fire"] {
+  color: #f79567;
+  background: #f7956741;
+}
+
+[data-type="water"] {
+  color: #a3bbe0;
+  background: #a3bbe02f;
+}
+
+[data-type="grass"] {
+  color: #3ca572;
+  background: #d9ffed;
+}
+
+[data-type="electric"] {
+  color: #e0d56b;
+  background: #e0d46b1c;
+}
+
+[data-type="psychic"] {
+  color: #ffca58;
+  background: #fde6b357;
+}
+
+[data-type="ice"] {
+  color: #80bbff;
+  background: #b3eefd4f;
+}
+
+[data-type="dragon"] {
+  color: #94b1ff;
+  background: #b3c7fd36;
+}
+
+[data-type="dark"] {
+  color: #c9b3fd;
+  background: #ae8bff36;
+}
+
+[data-type="fairy"] {
+  color: #fdb3f9;
+  background: #fdb3f936;
+}
+
+/* Keyframes */
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+}

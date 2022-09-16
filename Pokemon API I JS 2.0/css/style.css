@@ -1,0 +1,230 @@
+@import url(./reset-styles.css);
+@import url(./pokemon-styles.css);
+
+:root {
+  --defWidth: 1440px;
+  --defFont: "Montserrat";
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ba3f3f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+body {
+  isolation: auto;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #00000000;
+  z-index: 98;
+  visibility: hidden;
+  transition: background 1s ease 0.2s;
+}
+
+body.modal-on::before {
+  background: #00000060;
+  visibility: visible;
+}
+
+/* Section Hero */
+
+#s-hero {
+  padding-bottom: 0.625rem;
+  background: url(../img/svg/hero-background.svg) no-repeat center / cover;
+}
+
+#s-hero-header {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+#s-hero-header-logo img {
+  max-width: 150px;
+}
+
+#s-hero-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+}
+
+.s-hero-header-nav-link:first-child {
+  font: 600 1rem "Montserrat";
+  color: #ffffff;
+}
+
+#s-hero-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.s-hero-main-h1 {
+  font: 700 3rem "Montserrat";
+  color: #ffffff;
+  margin-bottom: 0.625rem;
+}
+
+.s-hero-main-h2 {
+  font: 600 0.875rem "Montserrat";
+  color: #ffffff;
+  margin-bottom: 0.625rem;
+}
+
+.s-hero-main-pokeball {
+  position: relative;
+  max-width: 100%;
+  top: 180px;
+  filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* Section Search */
+
+#s-search {
+  background: #f5f5f5;
+  padding: 100px 0px;
+}
+
+#s-search-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 25px;
+}
+
+.s-search-h1 {
+  font: 600 2rem var(--defFont);
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+#s-search-form {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 0.75rem;
+}
+
+#s-search-form-input {
+  width: 280px;
+  padding: 0px 20px 0px 10px;
+  font: 600 1rem var(--defFont);
+}
+
+#s-search-form-input::placeholder {
+  color: #b5b5b5;
+}
+
+.s-search-form-icon {
+  padding: 0.625rem;
+  border-radius: 0.75rem;
+  background: #ffd6d6;
+}
+
+/* Section Pokemon */
+
+#s-pokemon {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
+  display: flex;
+  gap: 50px;
+}
+
+#s-pokemon-types {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 150px 50px 0px;
+  border-right: 1px solid #dbdbdb;
+  gap: 35px;
+}
+
+.s-pokemon-types-item {
+  opacity: 50%;
+}
+
+.s-pokemon-types-item.on {
+  opacity: 100%;
+}
+
+.s-pokemon-types-item a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 600 1rem var(--defFont);
+  color: #797979;
+}
+
+.s-pokemon-types-item a > img {
+  max-width: 18px;
+}
+
+#s-pokemon-content {
+  padding: 50px 0px;
+}
+
+.s-pokemon-content-span {
+  display: flex;
+  align-items: center;
+  font: 500 1rem var(--defFont);
+  margin-bottom: 50px;
+}
+
+.s-pokemon-content-span img {
+  margin-right: 0.625rem;
+}
+
+[data-count] {
+  margin-right: 0.5rem;
+  font: 600 1rem var(--defFont);
+}
+
+#s-pokemon-content-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+#s-pokemon-show {
+  color: #c20000;
+  padding: 0.75rem;
+  transition: 0.2s;
+  background: #ffb7b7;
+  border-radius: 0.375rem;
+  font: 600 0.875rem "Montserrat";
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  cursor: pointer;
+}
+
+#s-pokemon-show:is(:hover) {
+  opacity: 0.75;
+}

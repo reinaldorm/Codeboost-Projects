@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="./script/script.js"></script>
+  <title>Itaú</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav id="header-nav">
+      <ul id="nav-links">
+        <li>
+          <img src="./img/svg/itau-logo.svg" height="50" alt="itau-logo" class="nav-logo" />
+        </li>
+        <li>
+          <a href="#" class="nav-item">Para Você <img src="./img/icon/dropdown-icon.svg" aria-hidden="true" /></a>
+        </li>
+        <li>
+          <a href="#" class="nav-item">Para Empresas <img src="./img/icon/dropdown-icon.svg" aria-hidden="true" /></a>
+        </li>
+        <li>
+          <a href="#" class="nav-item">Serviços <img src="./img/icon/dropdown-icon.svg" aria-hidden="true" /></a>
+        </li>
+        <li>
+          <a href="#" class="nav-item">Ajuda <img src="./img/icon/dropdown-icon.svg" aria-hidden="true" /></a>
+        </li>
+      </ul>
+      <form action="GET" id="nav-form">
+        <div class="search-wrapper">
+          <label for="Buscar"><img src="./img/icon/search-icon.svg" aria-hidden="true" /></label>
+          <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" />
+        </div>
+      </form>
+    </nav>
+    <a href="#" id="header-account"><img src="./img/icon/account-icon.svg" /> Acessar Conta</a>
+  </header>
+  <main id="main">
+    <section id="sect-main">
+      <div id="main-info">
+        <h1 class="main-h1">Tenha seu banco na palma da mão.</h1>
+        <p class="main-p">
+          Todas as operações que você precisa em um só lugar. Simples, completo e feito pra você.
+        </p>
+        <div class="main-store">
+          <a href="#" class="main-storeItem"><img src="./img/png/btn-apple-store.png" /></a>
+          <a href="#" class="main-storeItem"><img src="./img/png/btn-google-play.png" /></a>
+        </div>
+        <a href="#" class="main-scroll"><img src="./img/icon/arrowdown-icon.svg" />Continue Explorando</a>
+      </div>
+      <img src="./img/png/woman-bg.png" alt="itau-mulher" class="main-img" />
+    </section>
+  </main>
+  <section id="s-servicos">
+    <div class="servicos-info">
+      <span class="servicos-spn">Serviços Exclusivos</span>
+      <h1 class="servicos-h1">Gerencie suas finanças sem sair de casa</h1>
+      <p class="servicos-p">
+        Veja como você pode cuidar das suas finanças pelo app Itaú de forma segura, rápida e o
+        melhor, no conforto da sua casa.
+      </p>
+      <ul id="servicos-list">
+        <li class="servicos-item">
+          <img src="./img/icon/phone-icon.svg" />
+          Acompanhar sua conta, fazer transferências e pagamentos de onde estiver.
+        </li>
+        <li class="servicos-item">
+          <img src="./img/icon/hand-icon.svg" />
+          Soluções de empréstimos e renegociação para organizar suas finanças.
+        </li>
+        <li class="servicos-item">
+          <img src="./img/icon/peoplepaper-icon.svg" />
+          Diversas opções de investimentos, de acordo com o seu perfil de investidor.
+        </li>
+        <li class="servicos-item">
+          <img src="./img/icon/card-icon.svg" />
+          Acompanhe a fatura do seu cartão de crédito e faça compras online com seu cartão
+          virtual.
+        </li>
+      </ul>
+    </div>
+    <img class="servicos-img" src="./img/png/Samsung Galaxy S21 Ultra.png" />
+  </section>
+  <div class="responsivo-check">
+    <span class="responsivo-check-span">Responsivo <strong>OFF</strong></span>
+  </div>
+</body>
+
+</html>

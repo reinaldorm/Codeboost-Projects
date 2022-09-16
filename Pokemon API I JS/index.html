@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/favicon/pokemon-icon-file-4.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" defer src="./script/script.js"></script>
+  <title>Pokemon API I JS</title>
+</head>
+
+<body>
+
+  <main id="main">
+    <header id="header">
+      <img src="./img/svg/logo-pokemon.svg" alt="pokemon-logo" class="header-logo">
+      <nav id="header-nav">
+        <a data-pokedex="pokedex" href="#" class="header-nav-link">Pokedex</a>
+        <a href="https://github.com/reinaldorm" target="_blank" class="header-nav-link"><img src="./img/icon/icon-github.svg" alt="github"></a>
+        <a href="https://www.reddit.com/user/ImindR" target="_blank" class="header-nav-link"><img src="./img/icon/icon-reddit.svg" alt="reddit"></a>
+      </nav>
+    </header>
+    <section id="s-main">
+      <section id="s-main-info">
+        <span class="s-main-span"><img src="./img/icon/icon-bag.png"> Pokedex</span>
+        <h1 class="s-main-h1">Who is that pokemon?</h1>
+        <h2 class="s-main-h2">The perfect guide for those who want to hunt Pokemons around the world</h2>
+      </section>
+      <section id="s-main-img"><img src="./img/png/main-pokeball-blue.png" alt=""></section>
+    </section>
+  </main>
+
+  <section id="s-filter">
+    <section id="s-filter-info">
+      <h1 class="s-filter-info-h1">Select your Pokemon</h1>
+      <div action="" id="s-filter-info-form">
+        <input data-search="search" type="textarea" name="s-filter-info-search" placeholder="Search name or code" id="s-filter-info-search">
+        <img data-search="search" src="./img/icon/icon-search.svg" class="s-filter-info-btn">
+      </div>
+    </section>
+  </section>
+
+  <section id="s-pokemon">
+
+    <ul id="s-pokemon-menu">
+      <li data-type="all" class="s-pokemon-menu-link on"><a href="#"><img src="./img/icon/icon-all.svg" class="s-pokemon-menu-icon"> All</a></li>
+      <li data-type="1" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-normal.svg" class="s-pokemon-menu-icon"> Normal</a></li>
+      <li data-type="2" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-fighting.svg" class="s-pokemon-menu-icon"> Fighting</a></li>
+      <li data-type="3" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-flying.svg" class="s-pokemon-menu-icon"> Flying</a></li>
+      <li data-type="4" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-poison.svg" class="s-pokemon-menu-icon"> Poison</a></li>
+      <li data-type="5" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-ground.svg" class="s-pokemon-menu-icon"> Ground</a></li>
+      <li data-type="6" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-rock.svg" class="s-pokemon-menu-icon"> Rock</a></li>
+      <li data-type="7" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-bug.svg" class="s-pokemon-menu-icon"> Bug</a></li>
+      <li data-type="8" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-ghost.svg" class="s-pokemon-menu-icon"> Ghost</a></li>
+      <li data-type="9" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-steel.svg" class="s-pokemon-menu-icon"> Steel</a></li>
+      <li data-type="10" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-fire.svg" class="s-pokemon-menu-icon"> Fire</a></li>
+      <li data-type="11" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-water.svg" class="s-pokemon-menu-icon"> Water</a></li>
+      <li data-type="12" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-grass.svg" class="s-pokemon-menu-icon"> Grass</a></li>
+      <li data-type="13" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-electric.svg" class="s-pokemon-menu-icon"> Electric</a></li>
+      <li data-type="14" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-psychic.svg" class="s-pokemon-menu-icon"> Psychic</a></li>
+      <li data-type="15" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-ice.svg" class="s-pokemon-menu-icon"> Ice</a></li>
+      <li data-type="16" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-dragon.svg" class="s-pokemon-menu-icon"> Dragon</a></li>
+      <li data-type="17" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-dark.svg" class="s-pokemon-menu-icon"> Dark</a></li>
+      <li data-type="18" class="s-pokemon-menu-link"><a href="#"><img src="./img/icon/icon-fairy.svg" class="s-pokemon-menu-icon"> Fairy</a></li>
+    </ul>
+
+    <section id="s-pokemon-info">
+
+      <div data-mobile="menu" id="s-pokemon-mobile">
+        <div id="s-pokemon-mobile-open">
+          <span class="s-pokemon-mobile-open-span">Show: <strong class="open-span-type">All</strong></span>
+          <img src="./img/icon/icon-drop.svg">
+        </div>
+        <ul id="s-pokemon-menu-mobile">
+          <li data-type="all" class="s-pokemon-menu-mobile-link on"><a><img src="./img/icon/icon-all.svg" class="s-pokemon-menu-mobile-icon"> All</a></li>
+          <li data-type="1" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-normal.svg" class="s-pokemon-menu-mobile-icon"> Normal</a></li>
+          <li data-type="2" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-fighting.svg" class="s-pokemon-menu-mobile-icon"> Fighting</a></li>
+          <li data-type="3" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-flying.svg" class="s-pokemon-menu-mobile-icon"> Flying</a></li>
+          <li data-type="4" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-poison.svg" class="s-pokemon-menu-mobile-icon"> Poison</a></li>
+          <li data-type="5" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-ground.svg" class="s-pokemon-menu-mobile-icon"> Ground</a></li>
+          <li data-type="6" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-rock.svg" class="s-pokemon-menu-mobile-icon"> Rock</a></li>
+          <li data-type="7" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-bug.svg" class="s-pokemon-menu-mobile-icon"> Bug</a></li>
+          <li data-type="8" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-ghost.svg" class="s-pokemon-menu-mobile-icon"> Ghost</a></li>
+          <li data-type="9" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-steel.svg" class="s-pokemon-menu-mobile-icon"> Steel</a></li>
+          <li data-type="10" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-fire.svg" class="s-pokemon-menu-mobile-icon"> Fire</a></li>
+          <li data-type="11" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-water.svg" class="s-pokemon-menu-mobile-icon"> Water</a></li>
+          <li data-type="12" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-grass.svg" class="s-pokemon-menu-mobile-icon"> Grass</a></li>
+          <li data-type="13" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-electric.svg" class="s-pokemon-menu-mobile-icon"> Electric</a></li>
+          <li data-type="14" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-psychic.svg" class="s-pokemon-menu-mobile-icon"> Psychic</a></li>
+          <li data-type="15" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-ice.svg" class="s-pokemon-menu-mobile-icon"> Ice</a></li>
+          <li data-type="16" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-dragon.svg" class="s-pokemon-menu-mobile-icon"> Dragon</a></li>
+          <li data-type="17" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-dark.svg" class="s-pokemon-menu-mobile-icon"> Dark</a></li>
+          <li data-type="18" class="s-pokemon-menu-mobile-link"><a><img src="./img/icon/icon-fairy.svg" class="s-pokemon-menu-mobile-icon"> Fairy</a></li>
+        </ul>
+      </div>
+
+      <h1 class="s-pokemon-info-h1"><img src="./img/icon/icon-pokeball.svg"> <span data-count="count" class="pokemon-count">0</span>Pokemons</h1>
+
+      <ul data-pokemon="pokemon" id="s-pokemon-list">
+      </ul>
+
+      <button data-show="show" class="s-pokemon-show">
+        Load More Pokemons
+      </button>
+
+    </section>
+
+  </section>
+
+  <section data-modal="modal" id="s-modal">
+    <div class="s-modal-exit" data-exit="modal"><img src="./img/icon/icon-exit.svg" alt="exit-modal"></div>
+    <section id="s-modal-art">
+      <img data-art="art" src="./img/Bulbasaur.svg" class="s-modal-art-img">
+    </section>
+    <section id="s-modal-attributes">
+      <div id="s-modal-attributes-heading">
+        <div id="s-modal-attributes-head">
+          <h1 data-name="name" class="s-modal-attributes-heading-h1"></h1>
+          <span data-id="id" class="s-modal-attributes-heading-span"></span>
+        </div>
+        <ul data-types="types" id="s-modal-attributes-heading-types">
+        </ul>
+      </div>
+      <ul id="s-modal-attributes-infos">
+        <li class="s-modal-attributes-info">
+          <span class="s-modal-attributes-info-head">Height</span>
+          <span data-attrib="Height" class="s-modal-attributes-info-desc"></span>
+        </li>
+        <li class="s-modal-attributes-info">
+          <span class="s-modal-attributes-info-head">Weight</span>
+          <span data-attrib="Weight" class="s-modal-attributes-info-desc"></span>
+        </li>
+        <li class="s-modal-attributes-info">
+          <span class="s-modal-attributes-info-head">Abilities</span>
+          <span data-attrib="Abilities" class="s-modal-attributes-info-desc"></span>
+        </li>
+      </ul>
+      <div id="s-modal-attributes-weaknesses">
+        <h1 class="s-modal-attributes-weaknesses-h1">Weaknesses</h1>
+        <ul data-weakness="weaknesses" id="s-modal-attributes-weaknesses-types">
+        </ul>
+      </div>
+      <div id="s-modal-attributes-stats">
+        <h2 class="s-modal-attributes-stats">Stats</h2>
+        <ul id="s-modal-attributes-stats-list">
+          <li class="s-modal-attributes-stats-list-item">
+            <span class="stats-name">HP</span>
+            <div class="stats-meter-cont">
+              <div class="stats-meter" data-stats="meter"></div>
+            </div>
+          </li>
+          <li class="s-modal-attributes-stats-list-item">
+            <span class="stats-name">Attack</span>
+            <div class="stats-meter-cont">
+              <div class="stats-meter" data-stats="meter"></div>
+            </div>
+          </li>
+          <li class="s-modal-attributes-stats-list-item">
+            <span class="stats-name">Defense</span>
+            <div class="stats-meter-cont">
+              <div class="stats-meter" data-stats="meter"></div>
+            </div>
+          </li>
+          <li class="s-modal-attributes-stats-list-item">
+            <span class="stats-name">Sp. attack</span>
+            <div class="stats-meter-cont">
+              <div class="stats-meter" data-stats="meter"></div>
+            </div>
+          </li>
+          <li class="s-modal-attributes-stats-list-item">
+            <span class="stats-name">Sp. defense</span>
+            <div class="stats-meter-cont">
+              <div class="stats-meter" data-stats="meter"></div>
+            </div>
+          </li>
+          <li class="s-modal-attributes-stats-list-item">
+            <span class="stats-name">Speed</span>
+            <div class="stats-meter-cont">
+              <div class="stats-meter" data-stats="meter"></div>
+            </div>
+          </li>
+          <li class="s-modal-attributes-stats-list-sep">
+            <span class="separator"></span>
+            <span class="separator"></span>
+            <span class="separator"></span>
+            <span class="separator"></span>
+            <span class="separator"></span>
+            <span class="separator"></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <div data-scroll="start" class="go-up">
+    <img src="./img/icon/icon-up.svg" alt="scroll-to-beginning">
+  </div>
+
+</body>
+
+</html>

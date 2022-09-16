@@ -203,7 +203,7 @@ export default class Pokemon {
     const modalWeaknesses = this.pokemonModal.querySelector('[data-modal="weaknesses"]');
     const modalStats = this.pokemonModal.querySelectorAll('[data-modal="stats"]');
     const modalPlusTypes = this.pokemonModal.querySelector('[data-modal="plusTypes"]');
-    this.pokemonModal.style.backgroundImage = `url(../img/bg-types/${args[5][0].type}-background.svg)`;
+    this.pokemonModal.style.backgroundImage = `url(/img/bg-types/${args[5][0].type}-background.svg)`;
 
     modalImg.setAttribute('src', args[0]);
     modalName.innerText = args[1];

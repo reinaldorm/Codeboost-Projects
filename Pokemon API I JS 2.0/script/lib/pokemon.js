@@ -26,30 +26,6 @@ export default class Pokemon {
     return newId
   }
 
-  static repairHeight(height) {
-    const toFix = height.toString();
-    let newHeight;
-
-    if (toFix.length <= 1) newHeight = toFix.replace(/(\d)/, '0.$1m')
-    else if (toFix.length <= 2) newHeight = toFix.replace(/(\d)(\d)/, '$1.$2m')
-    else if (toFix.length <= 3) newHeight = toFix.replace(/(\d)(\d)(\d)/, '$1$2.$3m')
-
-    return newHeight
-  }
-
-  static repairWeight(weight) {
-    const toFix = weight.toString();
-    let newWeight;
-
-    if (toFix.length <= 1 && toFix[0] == 0) newWeight = toFix.replace(/(\d)/, '0.$1kg')
-    else if (toFix.length <= 1 && toFix[0] != 0) newWeight = toFix.replace(/(\d)/, '$1.0kg')
-    else if (toFix.length <= 2) newWeight = toFix.replace(/(\d)(\d)/, '$1.$2kg')
-    else if (toFix.length <= 3) newWeight = toFix.replace(/(\d)(\d)(\d)/, '$1$2.$3kg')
-    else if (toFix.length <= 4) newWeight = toFix.replace(/(\d)(\d)(\d)(\d)/, '$1$2$3.$4kg')
-
-    return newWeight
-  }
-
   async getPokemon(config) {
 
     const isNumber = typeof config === 'number'
@@ -81,8 +57,8 @@ export default class Pokemon {
       ability: pokemonJson.abilities.map((e) => {
         return e.ability.name
       }),
-      weight: pokemonJson.weight,
-      height: pokemonJson.height,
+      weight: pokemonJson.weight / 10,
+      height: pokemonJson.height / 10,
       img: pokemonJson.sprites.other['official-artwork'].front_default !== null ? pokemonJson.sprites.other['official-artwork'].front_default : './img/png/no-image.png'
     }
 
@@ -94,8 +70,6 @@ export default class Pokemon {
     const newPokemon = document.createElement('li');
 
     const pokemonType = pokemonInfo.types;
-    const pokemonWeight = this.constructor.repairWeight(pokemonInfo.weight)
-    const pokemonHeight = this.constructor.repairHeight(pokemonInfo.height)
     const pokemonId = this.constructor.repairId(pokemonInfo.id)
 
     newPokemon.classList.add('pokemon', 'initial')
@@ -105,8 +79,8 @@ export default class Pokemon {
         pokemonInfo.img,
         pokemonInfo.name,
         pokemonId,
-        pokemonWeight,
-        pokemonHeight,
+        pokemonInfo.weight,
+        pokemonInfo.height,
         pokemonType,
         pokemonInfo.stats,
         currentTarget
